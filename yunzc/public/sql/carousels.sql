@@ -1,0 +1,5 @@
+INSERT INTO `carousels`(`id`, `img`, `link`, `description`, `created_at`, `updated_at`, `type`) VALUES (2, 'images/5701e3bcaea33256d3ed979488a5ce2b.jpeg', 'https://www.baidu.com', 'asdasdasdasdasd', '2018-11-13 13:39:12', '2018-10-19 13:48:47', 1);
+INSERT INTO `carousels`(`id`, `img`, `link`, `description`, `created_at`, `updated_at`, `type`) VALUES (3, 'images/5701e3bcaea33256d3ed979488a5ce2b.jpeg', 'http://www.baidu.com', '论坛轮播图', '2018-11-13 13:39:17', '2018-10-30 14:06:51', 2);
+INSERT INTO `carousels`(`id`, `img`, `link`, `description`, `created_at`, `updated_at`, `type`) VALUES (4, 'images/a3b7b6e76234bbfbdc49a7e94707968f.png', 'http://www.baidu.com', '阿西吧', '2018-11-21 11:44:42', '2018-11-21 11:44:42', 1);
+INSERT INTO `carousels`(`id`, `img`, `link`, `description`, `created_at`, `updated_at`, `type`) VALUES (5, 'images/0c86906cf72452ac7f77e67e8bdeaba7.jpg', 'http://www.baidu.com', 'qweq', '2018-11-22 11:01:26', '2018-11-22 11:01:26', 1);
+INSERT INTO `carousels`(`id`, `img`, `link`, `description`, `created_at`, `updated_at`, `type`) VALUES (6, 'images/447c8391a877642385cd7e20ac325ba7.jpeg', NULL, '12', '2018-11-23 14:06:51', '2018-11-22 18:26:06', 1);

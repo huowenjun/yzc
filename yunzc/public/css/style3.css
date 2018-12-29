@@ -1,0 +1,25 @@
+@charset "utf-8";
+/* CSS Document */
+html{font-size: 62.5%}
+@media only screen and (min-width: 481px) {
+	html{font-size: 94% !important;/* 10（480÷320）÷16=94% */}
+}
+@media only screen and (min-width: 561px) {
+	html{font-size: 109% !important;/* 10（480÷320）÷16=94% */}
+}
+@media only screen and (min-width:641px ) {
+	html{font-size: 125% !important;/* 10（480÷320）÷16=94% */}
+
+}
+@media (max-width:756px){
+	/*td span{font-size:0.12rem!important;}*/
+}
+table{border-collapse: collapse;width: 100%!important;}
+	td{border:0.01rem solid #DDD;}
+*{ font-size: 0.32rem; margin: 0; padding: 0; font-family: 'PingFangSC';}
+li{list-style: none;}
+a{text-decoration: none;}
+
+.zhao_con{width:calc(100% - 1.08rem); margin: auto; color: #333; font-size: 0.32rem;margin-top: .1rem}
+
+.zhao_con .one{ font-size: 0.28rem; line-height: 0.5rem; text-align:justify; text-justify:inter-ideograph; margin-top: 0.5rem;}

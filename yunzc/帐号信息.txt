@@ -1,0 +1,16 @@
+svn
+svn://117.50.47.9/chaofei
+hwj 123
+
+mysql
+117.50.47.9
+chaofei  26jhB2Lt5iGPkn2S
+
+ftp
+
+117.50.47.9
+
+
+chaofei  tJMy4wrp2R
+
+frNR0BNVu36R2a3W6waJZyW8HCPdGi7g1yYM2xLtcm4B0d2Roare3RXo7XL3

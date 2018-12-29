@@ -1,0 +1,7263 @@
+
+        <html xmlns:v="urn:schemas-microsoft-com:vml"
+        xmlns:o="urn:schemas-microsoft-com:office:office"
+        xmlns:w="urn:schemas-microsoft-com:office:word"
+        xmlns="http://www.w3.org/TR/REC-html40">
+        <head><meta http-equiv=Content-Type content="text/html;  
+        charset=utf-8">
+        <meta name=ProgId content=Word.Document>
+        <meta name=Generator content="Microsoft Word 11">
+        <meta name=Originator content="Microsoft Word 11">
+        <xml><w:WordDocument><w:View>Print</w:View></xml></head>
+        <body><h1>1、首页</h1><div style="margin-left:20px;"><h2>1.1、获取城市列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>获取城市列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/cities</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 1,
+  &quot;message&quot;: &quot;success&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 41,
+      &quot;area_name&quot;: &quot;鞍山&quot;,
+      &quot;area_code&quot;: &quot;210300&quot;,
+      &quot;initial&quot;: &quot;a&quot;
+    },
+    {
+      &quot;id&quot;: 107,
+      &quot;area_name&quot;: &quot;安庆&quot;,
+      &quot;area_code&quot;: &quot;340800&quot;,
+      &quot;initial&quot;: &quot;a&quot;
+    },
+    {
+      &quot;id&quot;: 157,
+      &quot;area_name&quot;: &quot;安阳&quot;,
+      &quot;area_code&quot;: &quot;410500&quot;,
+      &quot;initial&quot;: &quot;a&quot;
+    },
+    {
+      &quot;id&quot;: 284,
+      &quot;area_name&quot;: &quot;安顺&quot;,
+      &quot;area_code&quot;: &quot;520400&quot;,
+      &quot;initial&quot;: &quot;a&quot;
+    },
+    {
+      &quot;id&quot;: 321,
+      &quot;area_name&quot;: &quot;安康&quot;,
+      &quot;area_code&quot;: &quot;610900&quot;,
+      &quot;initial&quot;: &quot;a&quot;
+    },
+    {
+      &quot;id&quot;: 350,
+      &quot;area_name&quot;: &quot;阿拉尔&quot;,
+      &quot;area_code&quot;: &quot;659002&quot;,
+      &quot;initial&quot;: &quot;a&quot;
+    },
+    {
+      &quot;id&quot;: 1,
+      &quot;area_name&quot;: &quot;北京&quot;,
+      &quot;area_code&quot;: &quot;110000&quot;,
+      &quot;initial&quot;: &quot;b&quot;
+    },
+    …………</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>1.2、轮播图</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>轮播图接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/sowing_map</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>轮播图类型  1=首页，2=论坛</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;轮播图数据&quot;,
+  &quot;data&quot;: {
+    &quot;carousel_data&quot;: [
+      {
+        &quot;id&quot;: 2,
+        &quot;img&quot;: &quot;images/5701e3bcaea33256d3ed979488a5ce2b.jpeg&quot;,
+        &quot;link&quot;: &quot;https://www.baidu.com&quot;,
+        &quot;description&quot;: &quot;asdasdasdasdasd&quot;
+      }
+    ],
+    &quot;carousel_count&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>话术</td>
+</tr>
+<tr>
+<td style="text-align: left;">carousel_data</td>
+<td style="text-align: left;">array</td>
+<td>轮播图数据</td>
+</tr>
+<tr>
+<td style="text-align: left;">carousel_count</td>
+<td style="text-align: left;">int</td>
+<td>轮播图数量</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>1.3、大咖推荐</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>大咖推荐接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/recommend_show</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>get </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;大咖数据&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 11,
+      &quot;img&quot;: &quot;images/9d3a1bc0f502465f094da5f9aa52ced1.jpg&quot;,
+      &quot;title&quot;: &quot;地中海风格7&quot;,
+      &quot;description&quot;: &quot;韩晓羽7&quot;
+    },
+    {
+      &quot;id&quot;: 14,
+      &quot;img&quot;: &quot;images/9d3a1bc0f502465f094da5f9aa52ced1.jpg&quot;,
+      &quot;title&quot;: &quot;地中海风格10&quot;,
+      &quot;description&quot;: &quot;韩晓羽10&quot;
+    },
+    {
+      &quot;id&quot;: 10,
+      &quot;img&quot;: &quot;images/9d3a1bc0f502465f094da5f9aa52ced1.jpg&quot;,
+      &quot;title&quot;: &quot;地中海风格6&quot;,
+      &quot;description&quot;: &quot;韩晓羽6&quot;
+    }
+  ]
+}
+{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;客官,已经没有了&quot;,
+  &quot;data&quot;: 0
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">str</td>
+<td>话术</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>推荐id</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>大咖头像</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">string</td>
+<td>推荐瓷砖描述</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p></div><h2>1.4、大咖详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>大咖详情接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/recommend_get_show</code></li>
+</ul>
+<p><strong>请求方式：</strong>
+get </p>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>大咖详情id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;大咖数据&quot;,
+  &quot;data&quot;: {
+    &quot;images&quot;: &quot;[\&quot;images\\/21ec4936cb7289c2cb1a6226af18d999.jpeg\&quot;,\&quot;images\\/a49d178811cef24e85d2317046f4fd14.jpg\&quot;,\&quot;images\\/f6397c14c18441dcbeac5900668cf55b.jpeg\&quot;]&quot;,
+    &quot;reason&quot;: &quot;啊实打实&quot;,
+    &quot;img&quot;: &quot;images/752d5503fd7d47702f75ab931dabc232.jpg&quot;,
+    &quot;title&quot;: &quot;啊实打实&quot;,
+    &quot;description&quot;: &quot;啊实打实的&quot;,
+    &quot;introduction&quot;: &quot;啊实打实的&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>话术</td>
+</tr>
+<tr>
+<td style="text-align: left;">images</td>
+<td style="text-align: left;">array</td>
+<td>推荐作品</td>
+</tr>
+<tr>
+<td style="text-align: left;">reason</td>
+<td style="text-align: left;">string</td>
+<td>推荐理由</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>大咖头像</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">string</td>
+<td>推荐瓷砖描述</td>
+</tr>
+<tr>
+<td style="text-align: left;">introduction</td>
+<td style="text-align: left;">string</td>
+<td>大咖简介</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>1.5、根据城市名获取城市信息</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>根据城市名获取城市信息</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/cities_info</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">city_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>城市名</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;城市信息&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 1,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;area_code&quot;: &quot;110000&quot;,
+    &quot;initial&quot;: &quot;B&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>唯一标示</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_name</td>
+<td style="text-align: left;">string</td>
+<td>城市名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_code</td>
+<td style="text-align: left;">int</td>
+<td>城市编码</td>
+</tr>
+<tr>
+<td style="text-align: left;">initial</td>
+<td style="text-align: left;">string</td>
+<td>大小写</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>1.6、广告接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>广告接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/advertising</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">num</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>随机数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;广告&quot;,
+  &quot;data&quot;: {
+    &quot;title&quot;:&quot;马可波罗&quot;,
+    &quot;img&quot;: &quot;images/447c8391a877642385cd7e20ac325ba7.jpeg&quot;,
+    &quot;link&quot;: &quot;http://www.baidu.com&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>广告图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">link</td>
+<td style="text-align: left;">string</td>
+<td>跳转链接</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>1.7、初始化论坛数据</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>首页初始化论坛随机数据----论坛初始化随机数据</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/random_forum</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;随机论坛数据&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 6,
+      &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+      &quot;name&quot;: &quot;萨米特&quot;,
+      &quot;photo&quot;: &quot;[\&quot;images/20181128/20181128201245-5bfe863ddef92.png\&quot;, \&quot;images/20181128/20181128201246-5bfe863e6f17c.png\&quot;, \&quot;images/20181128/20181128201246-5bfe863ebdc34.png\&quot;]&quot;,
+      &quot;browse_num&quot;: 0,
+      &quot;replies_num&quot;: 0,
+      &quot;content&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+      &quot;parent_type&quot;: 2,
+      &quot;type&quot;: 8,
+      &quot;created_at&quot;: &quot;2018-11-23 16:22:34&quot;,
+      &quot;users_id&quot;: 17,
+      &quot;photo_status&quot;: 2,
+      &quot;fabulous_yes_or_no&quot;: 1
+    },
+   …………
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>论坛id</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>论坛名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">string</td>
+<td>图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">browse_num</td>
+<td style="text-align: left;">int</td>
+<td>浏览量</td>
+</tr>
+<tr>
+<td style="text-align: left;">replies_num</td>
+<td style="text-align: left;">int</td>
+<td>回帖量</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">partent_type</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发表时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">users_id</td>
+<td style="text-align: left;">int</td>
+<td>发表者用户ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo_status</td>
+<td style="text-align: left;">int</td>
+<td>图片数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulous_yes_or_no</td>
+<td style="text-align: left;">int</td>
+<td>是否收藏1：没有，0：已收藏</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<p>-随机生成5条</p></div></div><h1>2、未读消息</h1><div style="margin-left:20px;"><h2>2.1、未读点赞次数</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>未读点赞次数接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/no_read</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;未读点赞次数&quot;,
+  &quot;data&quot;: {
+    &quot;num&quot;: 2
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">num</td>
+<td style="text-align: left;">int</td>
+<td>次数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>2.2、未读点赞记录</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>未读点赞记录接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/see_no_read</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;未读点赞记录&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;name&quot;: &quot;霍文俊&quot;,
+        &quot;img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+        &quot;status&quot;: 1,
+        &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;
+      },
+      …………
+    ],
+    &quot;last_page&quot;: 2,
+    &quot;current_page&quot;: 2
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>点赞人姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>点赞人头像</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">int</td>
+<td>0:未读，1：已读</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>论坛标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>2.3、评论未读数量</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>评论未读数量接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/no_read_comment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;评论未读数量&quot;,
+  &quot;data&quot;: {
+    &quot;num&quot;: 4
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>2.4、查看未读消息--评论列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>查看未读消息--评论列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/user/register</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查看未读消息--评论列表&quot;,
+  &quot;data&quot;: {
+    &quot;info&quot;: [
+      {
+        &quot;id&quot;: 34,
+        &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+        &quot;parent_id&quot;: 21,
+        &quot;name&quot;: &quot;霍文俊&quot;,
+        &quot;img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+        &quot;content&quot;: &quot;测试一下下&quot;,
+        &quot;created_at&quot;: &quot;2018-11-30 17:28:15&quot;,
+        &quot;status&quot;: 1
+      },
+      …………
+    ],
+    &quot;last_page&quot;: 1,
+    &quot;current_page&quot;: &quot;1&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>记录ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>评论人姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>头像</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">int</td>
+<td>是否已读</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>3、十个小模块--广播找砖</h1><div style="margin-left:20px;"><h2>3.1、广播找砖列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>广播找砖列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_search_bricks</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;specifications&quot;: 11,
+        &quot;category&quot;: 3,
+        &quot;style&quot;: 3,
+        &quot;brands_id&quot;: 3,
+        &quot;sketch&quot;: &quot;美而好&quot;,
+        &quot;photo&quot;: &quot;images/a3b7b6e76234bbfbdc49a7e94707968f.png&quot;
+      },
+
+    ],
+    &quot;last_page&quot;: 3,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p>参数说明请参考提交数据参数</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.2、广播找砖详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>广播找砖详情</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_search_bricks</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>详情id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;specifications&quot;: &quot;200*200&quot;,
+    &quot;category&quot;: &quot;瓷质砖&quot;,
+    &quot;style&quot;: &quot;瓷质砖&quot;,
+    &quot;brands_id&quot;: &quot;马可波罗&quot;,
+    &quot;sketch&quot;: &quot;美而好&quot;,
+    &quot;photo&quot;: &quot;images/a3b7b6e76234bbfbdc49a7e94707968f.png&quot;
+    &quot;created_at&quot;:''
+    &quot;now_time&quot;:''
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">groupid</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.3、广播找砖添加数据</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>广播找砖添加数据</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_search_bricks</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">specifications</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>规格</td>
+</tr>
+<tr>
+<td style="text-align: left;">category</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>品类</td>
+</tr>
+<tr>
+<td style="text-align: left;">style</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>材质</td>
+</tr>
+<tr>
+<td style="text-align: left;">brands_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>品牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">sketch</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>简述</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>照片使用集合存储，然后json</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;添加成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.4、规格列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>规格列表</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/specifications</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;规格列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 11,
+      &quot;name&quot;: &quot;200*200&quot;
+    },
+
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.5、品类接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>品类接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/category</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;品类列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 16,
+      &quot;name&quot;: &quot;内墙砖&quot;
+    },
+
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.6、材质列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>材质接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/material</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>    &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;材质列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 3,
+      &quot;name&quot;: &quot;瓷质砖&quot;
+    },
+    {
+      &quot;id&quot;: 4,
+      &quot;name&quot;: &quot;陶制砖&quot;
+    },
+    {
+      &quot;id&quot;: 5,
+      &quot;name&quot;: &quot;其他材质&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">groupid</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.7、品牌列表接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>品牌列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/brand</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;品牌列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 19,
+      &quot;name&quot;: &quot;安华瓷砖&quot;,
+      &quot;trade_mark&quot;: &quot;images/002655487b620cd084c23f803813844c.jpg&quot;,
+      &quot;initial&quot;: &quot;A&quot;
+    },
+
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.8、我发布的--广播列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--广播列表</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_search_bricks</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（1）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 31,
+        &quot;specifications&quot;: &quot;300*300&quot;,
+        &quot;category&quot;: &quot;广场砖&quot;,
+        &quot;style&quot;: &quot;其他&quot;,
+        &quot;brands_id&quot;: &quot;东鹏陶瓷&quot;,
+        &quot;sketch&quot;: &quot;简述&quot;,
+        &quot;photo&quot;: [
+          &quot;images/20181201/20181201120200-5c0207b8e91d8.png&quot;,
+          &quot;images/20181201/20181201120201-5c0207b94757a.png&quot;,
+          &quot;images/20181201/20181201120201-5c0207b99ce1e.png&quot;
+        ]
+      },
+       ],
+    &quot;last_page&quot;: 3,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.9、我发布的--广播详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--广播详情</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_search_bricks</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>广播id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;specifications&quot;: &quot;200*200&quot;,
+    &quot;category&quot;: &quot;瓷质砖&quot;,
+    &quot;style&quot;: &quot;瓷质砖&quot;,
+    &quot;brands_id&quot;: &quot;测试-------马可波罗&quot;,
+    &quot;sketch&quot;: &quot;美而好&quot;,
+    &quot;photo&quot;: [
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+    ],
+    &quot;created_at&quot;: 1542878263,
+    &quot;now_time&quot;: 1543911430
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>3.10、我发布的--广播删除</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--广播删除</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/del_my_search_bricks</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>广播id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>       {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;删除成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>4、论坛</h1><div style="margin-left:20px;"><h2>4.1、一键发布-品牌论坛</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>一键发布---品牌论坛接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/brand_forum</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;品牌论坛列表&quot;,
+  &quot;data&quot;: [
+   {
+      &quot;id&quot;: 19,
+      &quot;name&quot;: &quot;安华瓷砖&quot;,
+      &quot;trade_mark&quot;: &quot;images/002655487b620cd084c23f803813844c.jpg&quot;,
+      &quot;initial&quot;: &quot;A&quot;
+    },
+    ………………</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>品牌论坛列表</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>品牌名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">trade_mark</td>
+<td style="text-align: left;">string</td>
+<td>品牌图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">initial</td>
+<td style="text-align: left;">string</td>
+<td>字母大小写</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.2、一键发布-主题论坛</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>主题论坛列表选择接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/theme</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>
+<p>POST </p>
+<p><strong>返回示例</strong></p>
+</li>
+</ul>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;主题论坛列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 6,
+      &quot;name&quot;: &quot;马可波罗的瓷砖真的好吗&quot;
+    },
+    …………</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>主题id</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>主题名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.3、一键发布</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>一键发布接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/release</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>论坛标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>论坛发布内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>主分类（1：热门 2：品牌 3：地区 4：主题）</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>图片路径</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>城市code</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;发帖成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.4、分类选择后列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>论坛分类选择后的数据接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/forum_list</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">str</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;论坛数据&quot;,
+  &quot;data&quot;: {
+    &quot;list&quot;: [
+      {
+        &quot;id&quot;: 35,
+        &quot;title&quot;: &quot;你好&quot;,
+        &quot;photo&quot;: [
+          &quot;images/20181128/20181128201245-5bfe863ddef92.png&quot;
+        ],
+        &quot;browse_num&quot;: &quot;25&quot;,
+        &quot;replies_num&quot;: &quot;0&quot;,
+        &quot;parent_type&quot;: 2,
+        &quot;type&quot;: 19,
+        &quot;photo_status&quot;: 1,
+        &quot;collection_yes_or_no&quot;: 1,
+
+      },
+      …………
+    ],
+    &quot;last_page&quot;: 3,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>列表ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>列表标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">string</td>
+<td>列表论坛照片</td>
+</tr>
+<tr>
+<td style="text-align: left;">browse_num</td>
+<td style="text-align: left;">int</td>
+<td>浏览量</td>
+</tr>
+<tr>
+<td style="text-align: left;">replies_num</td>
+<td style="text-align: left;">int</td>
+<td>回帖量</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo_status</td>
+<td style="text-align: left;">int</td>
+<td>统计图片数量，大于等于3，返回2，小于3返回1</td>
+</tr>
+<tr>
+<td style="text-align: left;">collection_yes_or_no</td>
+<td style="text-align: left;">int</td>
+<td>是否收藏1:否0：是</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+所有参数都不传，分页返回论坛所有数据
+parent_type，type：返回选择分类后的数据
+api_token:如果没有token返回参数中所有的数据都没有收藏（1）</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.5、分类列表详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>
+<ul>
+<li>论坛主页---热门/品牌论坛入口/地区论坛入口/主题品牌论坛入口/列表选择列表后的详情数据接口</li>
+</ul>
+</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/forum_list</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>用户登录后传token，没有登录就不需要传</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛详情ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;论坛数据&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 1,
+    &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+    &quot;name&quot;: &quot;测试-------马可波罗&quot;,
+    &quot;photo&quot;: [
+      &quot;images/20181128/20181128201245-5bfe863ddef92.png&quot;,
+    ],
+    &quot;browse_num&quot;: &quot;82&quot;,
+    &quot;replies_num&quot;: &quot;1.1 万&quot;,
+    &quot;fabulous_num&quot;:'1',
+    &quot;content&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+    &quot;parent_type&quot;: 2,
+    &quot;type&quot;: 3,
+    &quot;created_at&quot;: &quot;2018-11-23&quot;,
+    &quot;users_id&quot;: 17,
+    &quot;photo_status&quot;: 2,
+    &quot;collection_yes_or_no&quot;: 0,
+    &quot;fabulous_yes_or_no&quot;: 0,
+    &quot;comment&quot;: {
+      &quot;info&quot;: [
+        {
+          &quot;one_id&quot;: 21,
+          &quot;one_users_id&quot;: 17,
+          &quot;forum_id&quot;: 1,
+          &quot;name&quot;: &quot;霍文俊&quot;,
+          &quot;img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+          &quot;content&quot;: &quot;这到底还是好的&quot;,
+          &quot;created_at&quot;: &quot;2018-11-30 16:55:54&quot;,
+          &quot;fabulou_num&quot;: 1,
+          &quot;yse_no_fabulous&quot;: 1,
+          &quot;two_comment&quot;: {
+            &quot;info&quot;: [
+              {
+                &quot;id&quot;: 31,
+                &quot;forum_id&quot;: 1,
+                &quot;parent_id&quot;: 21,
+                &quot;name&quot;: &quot;霍文俊&quot;,
+                &quot;content&quot;: &quot;测试一下下&quot;,
+                &quot;created_at&quot;: &quot;2018-11-30 17:01:02&quot;
+              },
+             …………
+            ],
+            &quot;count&quot;: 4,
+            &quot;last_page&quot;: 2,
+            &quot;current_page&quot;: 1
+          }
+        }
+        …………
+      ],
+      &quot;last_page&quot;: 1,
+      &quot;current_page&quot;: 1
+    }
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>列表ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>列表标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>列表二级论坛名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">string</td>
+<td>列表论坛照片</td>
+</tr>
+<tr>
+<td style="text-align: left;">browse_num</td>
+<td style="text-align: left;">str</td>
+<td>浏览量</td>
+</tr>
+<tr>
+<td style="text-align: left;">replies_num</td>
+<td style="text-align: left;">str</td>
+<td>回帖量</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulous_num</td>
+<td style="text-align: left;">str</td>
+<td>点赞数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发布时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">users_id</td>
+<td style="text-align: left;">int</td>
+<td>发布者id</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo_status</td>
+<td style="text-align: left;">int</td>
+<td>统计照片</td>
+</tr>
+<tr>
+<td style="text-align: left;">collection_yes_or_no</td>
+<td style="text-align: left;">int</td>
+<td>是否收藏</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulous_yes_or_no</td>
+<td style="text-align: left;">int</td>
+<td>是否点赞</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum_replie</td>
+<td style="text-align: left;">str</td>
+<td>回帖总数</td>
+</tr>
+<tr>
+<td style="text-align: left;">comment</td>
+<td style="text-align: left;">评论</td>
+</tr>
+</tbody>
+</table>
+<p>1级评论</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">one_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">one_users_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>发布者姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>发布者照片</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发布评论时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulou_num</td>
+<td style="text-align: left;">int</td>
+<td>点赞数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">yse_no_fabulous</td>
+<td style="text-align: left;">int</td>
+<td>该用户是否点过赞（1：是，0为否）</td>
+</tr>
+<tr>
+<td style="text-align: left;">two_comment</td>
+<td style="text-align: left;">list</td>
+<td>二级评论列表</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p>二级评论列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>二级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>二级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>二级评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发布时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">count</td>
+<td style="text-align: left;">int</td>
+<td>二级评论总条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.6、我的收藏</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我的收藏接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/my_collection</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;我的收藏列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;北京&quot;,
+      &quot;parent_type&quot;: &quot;3&quot;
+    },
+
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>二级分类id</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>论坛名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">string</td>
+<td>主分类</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.7、常去的论坛</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户常去的论坛接口（有token就传，无token就不传）</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_offten_go</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;常去的论坛&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 1,
+      &quot;name&quot;: &quot;北京&quot;,
+      &quot;parent_type&quot;: &quot;3&quot;
+    },
+
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>二级分类id</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>论坛名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">string</td>
+<td>主分类</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.8、用户管理论坛列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户管理论坛列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/manage</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;用户管理论坛&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 7,
+        &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+        &quot;photo&quot;: &quot;images/002655487b620cd084c23f803813844c.jpg&quot;,
+        &quot;browse_num&quot;: 0,
+        &quot;replies_num&quot;: 0,
+        &quot;parent_type&quot;: 2,
+        &quot;content&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+        &quot;type&quot;: 9
+      },
+
+    ],
+    &quot;last_page&quot;: 2,
+    &quot;current_page&quot;: 1
+  }</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>论坛列表ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">string</td>
+<td>图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">browse_num</td>
+<td style="text-align: left;">int</td>
+<td>浏览量</td>
+</tr>
+<tr>
+<td style="text-align: left;">replies_num</td>
+<td style="text-align: left;">int</td>
+<td>回帖量</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.9、用户管理论坛列表详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户管理论坛列表详情接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/manage</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>详情ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;用户管理论坛&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 12,
+    &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+    &quot;photo&quot;: &quot;images/002655487b620cd084c23f803813844c.jpg&quot;,
+    &quot;browse_num&quot;: 1,
+    &quot;replies_num&quot;: 0,
+    &quot;parent_type&quot;: 3,
+    &quot;type&quot;: 110000,
+    &quot;content&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>论坛列表ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">string</td>
+<td>图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">browse_num</td>
+<td style="text-align: left;">int</td>
+<td>浏览量</td>
+</tr>
+<tr>
+<td style="text-align: left;">replies_num</td>
+<td style="text-align: left;">int</td>
+<td>回帖量</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.10、发布管理--删除自己的某条论坛</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>发布管理--删除自己的某条论坛</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/del_forum</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>论坛数据ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;删除成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.11、收藏（关注论坛）</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>收藏（关注论坛）/取消关注接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/collection_content</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容id</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（0取消关注，1关注收藏）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;已收藏（可能失败）&quot;,
+  &quot;data&quot;: {
+  &quot;f&quot;: 1
+  }
+}
+{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;收藏成功&quot;,
+  &quot;data&quot;: {
+  &quot;f&quot;: 0
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong>
+f提交参数的值是根据返回参数f的值来定的</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.12、当前用户收藏论坛内容的总数</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/user/register</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;共收藏论坛内容的总数&quot;,
+  &quot;data&quot;: {
+    &quot;len&quot;: 0
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">len</td>
+<td style="text-align: left;">int</td>
+<td>收藏论坛内容的总数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.13、热门论坛接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>热门论坛接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/hot_forum</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">str</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;热门列表&quot;,
+  &quot;data&quot;: {
+    &quot;list&quot;: [
+      {
+        &quot;id&quot;: 9,
+        &quot;title&quot;: &quot;&amp;lt;script&amp;gt;alert('测试xss攻击')&amp;lt;/script&amp;gt;&quot;,
+        &quot;photo&quot;: [
+          &quot;images/20181128/20181128201245-5bfe863ddef92.png&quot;,
+          &quot;images/20181128/20181128201246-5bfe863e6f17c.png&quot;,
+          &quot;images/20181128/20181128201246-5bfe863ebdc34.png&quot;
+        ],
+        &quot;browse_num&quot;: &quot;3&quot;,
+        &quot;replies_num&quot;: &quot;0&quot;,
+        &quot;parent_type&quot;: 3,
+        &quot;type&quot;: 120000,
+        &quot;photo_status&quot;: 2,
+        &quot;collection_yes_or_no&quot;: 1
+      }</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>列表ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">title</td>
+<td style="text-align: left;">string</td>
+<td>列表标题</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">string</td>
+<td>列表论坛照片</td>
+</tr>
+<tr>
+<td style="text-align: left;">browse_num</td>
+<td style="text-align: left;">int</td>
+<td>浏览量</td>
+</tr>
+<tr>
+<td style="text-align: left;">replies_num</td>
+<td style="text-align: left;">int</td>
+<td>回帖量</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo_status</td>
+<td style="text-align: left;">int</td>
+<td>统计图片数量，大于等于3，返回2，小于3返回1</td>
+</tr>
+<tr>
+<td style="text-align: left;">collection_yes_or_no</td>
+<td style="text-align: left;">int</td>
+<td>是否收藏1:否0：是</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+api_token:如果没有token返回参数中所有的数据都没有收藏（1）</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.14、点赞/取消点赞（0取消，1点赞）</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>点赞/取消点赞（0取消，1点赞）</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/fabulous</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>主分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>二级分类</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>0取消，1点赞</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulous_users_yse_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>被点赞人id(论坛发布者id--users_id)</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;点赞成功&quot;,
+  &quot;data&quot;: {
+    &quot;f&quot;: 0
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">int</td>
+<td>0取消，1点赞</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<p>f提交参数的值是根据返回参数f的值来定的</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.15、一级评论提交</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>一级评论接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/one_comment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;评论发布成功&quot;,
+  &quot;data&quot;: {
+    &quot;forum_id&quot;: &quot;1&quot;,
+    &quot;content&quot;: &quot;这到底还是好的&quot;,
+    &quot;users_id&quot;: &quot;17&quot;,
+    &quot;id&quot;: 21
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">users_id</td>
+<td style="text-align: left;">int</td>
+<td>评论人id</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>本条记录id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.16、二级评论提交</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>二级评论提交接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/two_comment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>回复一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">one_users_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>一级评论发布者ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;评论回复成功&quot;,
+  &quot;data&quot;: {
+    &quot;parent_id&quot;: &quot;21&quot;,
+    &quot;content&quot;: &quot;测试一下下&quot;,
+    &quot;forum_id&quot;: &quot;1&quot;,
+    &quot;one_users_id&quot;: &quot;17&quot;,
+    &quot;users_id&quot;: &quot;17&quot;,
+    &quot;updated_at&quot;: &quot;2018-11-30 17:01:30&quot;,
+    &quot;id&quot;: 33
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容id</td>
+</tr>
+<tr>
+<td style="text-align: left;">one_users_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">users_id</td>
+<td style="text-align: left;">int</td>
+<td>二级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">updated_at</td>
+<td style="text-align: left;">string</td>
+<td>发布时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>此条记录ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.17、论坛评论展示</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>论坛评论展示接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/show_comment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">str</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>默认为1</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;论坛评论&quot;,
+  &quot;data&quot;: {
+    &quot;info&quot;: [
+      {
+        &quot;one_id&quot;: 21,
+        &quot;one_users_id&quot;: 17,
+        &quot;forum_id&quot;: 1,
+        &quot;name&quot;: &quot;霍文俊&quot;,
+        &quot;img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+        &quot;content&quot;: &quot;这到底还是好的&quot;,
+        &quot;created_at&quot;: &quot;2018-11-30 16:55:54&quot;,
+        &quot;fabulou_num&quot;: 0,
+        &quot;yse_no_fabulous&quot;: 0,
+        &quot;two_comment&quot;: {
+          &quot;info&quot;: [
+            {
+              &quot;id&quot;: 31,
+              &quot;forum_id&quot;: 1,
+              &quot;parent_id&quot;: 21,
+              &quot;name&quot;: &quot;霍文俊&quot;,
+              &quot;content&quot;: &quot;测试一下下&quot;,
+              &quot;created_at&quot;: &quot;2018-11-30 17:01:02&quot;
+            },
+            …………
+          ],
+          &quot;last_page&quot;: 1,
+          &quot;current_page&quot;: 1
+        }
+      }
+    ],
+    &quot;last_page&quot;: 1,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">one_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">one_users_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>发布者姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>发布者照片</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发布评论时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulou_num</td>
+<td style="text-align: left;">int</td>
+<td>点赞数量</td>
+</tr>
+<tr>
+<td style="text-align: left;">yse_no_fabulous</td>
+<td style="text-align: left;">int</td>
+<td>该用户是否点过赞（1：是，0为否）</td>
+</tr>
+<tr>
+<td style="text-align: left;">two_comment</td>
+<td style="text-align: left;">list</td>
+<td>二级评论列表</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p>二级评论列表</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>二级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>二级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>二级评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发布时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong>
+评论点赞的显示需要token</p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.18、二级评论加载更多--分页接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>二级评论加载更多--分页接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/two_page_comment</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">size</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>展示条数（默认3）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;二级评论&quot;,
+  &quot;data&quot;: {
+    &quot;info&quot;: [
+      {
+        &quot;id&quot;: 34,
+        &quot;forum_id&quot;: 1,
+        &quot;parent_id&quot;: 21,
+        &quot;name&quot;: &quot;霍文俊&quot;,
+        &quot;content&quot;: &quot;测试一下下&quot;,
+        &quot;created_at&quot;: &quot;2018-11-30 17:28:15&quot;
+      }
+    ],
+    &quot;last_page&quot;: 2,
+    &quot;current_page&quot;: 2
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>二级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">parent_id</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>二级评论发布者ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>二级评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">string</td>
+<td>发布时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.19、一级评论点赞/取消点赞（0取消，1点赞）</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>一级评论点赞/取消点赞（0取消，1点赞）接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_fabulou</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">one_comment_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>一级评论ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">yse_no_fabulou</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>1：点赞，0：取消</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;点赞成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.20、回帖总数</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>回帖总数接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/sumreplie</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>论坛内容ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;回帖总数&quot;,
+  &quot;data&quot;: {
+    &quot;replies_num&quot;: 104
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.21、论坛搜索</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>论坛搜索</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/search_forum</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">key</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>搜索关键字</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>token（有则传，没有拉到）</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（1论坛）</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>默认第一页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;论坛搜索数据&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 35,
+        &quot;title&quot;: &quot;你好&quot;,
+        &quot;photo&quot;: [
+          &quot;images/20181128/20181128201245-5bfe863ddef92.png&quot;
+        ],
+        &quot;browse_num&quot;: &quot;26&quot;,
+        &quot;replies_num&quot;: &quot;0&quot;,
+        &quot;parent_type&quot;: 2,
+        &quot;type&quot;: 19,
+        &quot;photo_status&quot;: 1,
+        &quot;collection_yes_or_no&quot;: 1
+      }
+    ],
+    &quot;last_page&quot;: 1,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.22、一级评论详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>一级评论详情</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/one_comment_info</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>一级评论详情ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">str</td>
+<td>token(登录传，不登录不传)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;一级评论详情&quot;,
+  &quot;data&quot;: {
+    &quot;one_id&quot;: 21,
+    &quot;one_users_id&quot;: 17,
+    &quot;forum_id&quot;: 1,
+    &quot;name&quot;: &quot;霍文俊&quot;,
+    &quot;img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+    &quot;content&quot;: &quot;这到底还是好的&quot;,
+    &quot;created_at&quot;: &quot;2018-11-30 16:55:54&quot;,
+    &quot;fabulou_num&quot;: 3,
+    &quot;sum_comment&quot;: 5
+    &quot;yse_no_fabulous&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">one_id</td>
+<td style="text-align: left;">int</td>
+<td>id</td>
+</tr>
+<tr>
+<td style="text-align: left;">one_users_id</td>
+<td style="text-align: left;">int</td>
+<td>发表者id</td>
+</tr>
+<tr>
+<td style="text-align: left;">forum_id</td>
+<td style="text-align: left;">int</td>
+<td>论坛ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">str</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">str</td>
+<td>头像</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">str</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">str</td>
+<td>时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">fabulou_num</td>
+<td style="text-align: left;">int</td>
+<td>点赞数</td>
+</tr>
+<tr>
+<td style="text-align: left;">sum_comment</td>
+<td style="text-align: left;">int</td>
+<td>一级评论一下二级评论总回复数</td>
+</tr>
+<tr>
+<td style="text-align: left;">yse_no_fabulous</td>
+<td style="text-align: left;">int</td>
+<td>是否点赞（默认为0（NO），1(yes)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.23、产品中心列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>产品中心列表</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_product_data</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>品牌id</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;产品中心数据&quot;,
+  &quot;data&quot;: {
+    &quot;list&quot;: [
+      {
+        &quot;id&quot;: 17,
+        &quot;brand_id&quot;: 3,
+        &quot;img&quot;: &quot;images/8f15bd5df7abaf0cb09ddc828d02ef4f.jpg&quot;,
+        &quot;name&quot;: &quot;阿发啊&quot;
+      }
+    ],
+    &quot;last_page&quot;: 2,
+    &quot;current_page&quot;: 2
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>id</td>
+</tr>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">int</td>
+<td>品牌ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">str</td>
+<td>产品图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">str</td>
+<td>产品名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页码</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.24、找砖产品搜索</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>找砖产品搜索</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/search_evaluate</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">key</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>搜索关键字</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>token（有则传，没有拉到）</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（2产品）</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">int</td>
+<td>默认第一页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;搜索缓存数据&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;brand_id&quot;: 3,
+        &quot;img&quot;: &quot;images/5bc77ef2a45bb0294204c5f6b60bb80e-CZ6312AS  CZ8312AS    凯悦石   杏色 (1).jpg&quot;,
+        &quot;name&quot;: &quot;阿加西&quot;
+      },
+      {
+        &quot;brand_id&quot;: 3,
+        &quot;img&quot;: &quot;images/7d17031c65510b40db0e6473b96a99e8.jpg&quot;,
+        &quot;name&quot;: &quot;阿曼米黄&quot;
+      }
+    ],
+    &quot;last_page&quot;: 1,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>4.25、历史搜索词</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>历史搜索词接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/history_search</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>获取历史词标示（1论坛2产品3拼单）</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>token(有则传，没有就不传)</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;非登录历史搜索词&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 3,
+      &quot;key&quot;: &quot;阿&quot;,
+      &quot;status&quot;: 2
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>关键词ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">key</td>
+<td style="text-align: left;">str</td>
+<td>关键词</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">int</td>
+<td>关键词标示</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>5、设置</h1><div style="margin-left:20px;"><h2>5.1、免责说明接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>免责说明接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/disclaimer</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;免责说明&quot;,
+  &quot;data&quot;: {
+    &quot;explain&quot;: &quot;1本网站所含的所有信息只是对相关问题的一般性指导。基于所涉及的具体事实，相关法律的适用和影响会有很大的不同。考虑到法律、规章、制度以及电子通信技术内在风险的内在风险，网站所存储的信息可能会有所滞后、遗漏或误差。相应地，本网站的信息发布是基于这样一种理解，即信息的作者或发布者没有接受聘请而提供法律、会计、税务或其他专业意见或服务。因此，本网站信息不能用于替代专业会计、税务、法律或其他专业咨询者提供的咨询意见。在做出决定或采取行动前，您应咨询普华永道专业服务人士。 \r\n  \r\n\r\n\r\n\r\n\r\n2尽管我们会尽力确保网站获得信息的来源可靠，但普华永道不对任何信息出现差错或遗漏，以及因使用该信息而获得的结果承担法律责任。本网站的所有信息均“按原样”提供，网站不担保信息的完整性、准确性、时效性以及使用该信息而获得的结果，而且没有任何种类明示或暗示的保证，包括但不限于性能保证、适销性保证以及为某一特殊目的适用性的保证。任何情况下，普华永道、其关联机构、合伙人、代理人或者员工均不对您及他人基于本网站信息所作出的决定或行动承担法律责任和义务，而且即使已经告知您发生损失的可能性，亦不对附带的、特殊或类似的损失承担法律责任或义务。 \r\n\r\n\r\n\r\n\r\n  \r\n3本网站的某些链接会链接到第三方维护的网站，但这些网站的链接不一定都会显示在本网站的页面中。普华永道没有验证该等第三方网站的内容，并且不支持、不保证、不推销、不推荐任何第三方网站提供的或通过第三方网站可获取的由任何其他个人或机构提供的服务或产品。普华永道没有发布或被要求发布任何在这些网站上出现的广告。&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">explain</td>
+<td style="text-align: left;">string</td>
+<td>免责文本</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>5.2、关于我们</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>关于我们</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/about_us</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;"><strong>参数：</strong></th>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th>类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">num</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:安卓 0：ios</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;关于我们--版本控制&quot;,
+  &quot;data&quot;: {
+    &quot;content&quot;: &quot;瓷砖，又称磁砖，是以耐火的金属氧化物及半金属氧化物，经由研磨、混合、压制、施釉、烧结之过程，而形成的一种耐酸碱的瓷质或石质等，建筑或装饰材料，称之为瓷砖。其原材料多由粘土、石英砂等等混合而成。&quot;,
+    &quot;now_version_a&quot;: &quot;V1.1&quot;,
+    &quot;server_tel&quot;: &quot;400-800-8000&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">string</td>
+<td>内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_version_a</td>
+<td style="text-align: left;">string</td>
+<td>安卓版本号</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_version_i</td>
+<td style="text-align: left;">string</td>
+<td>ios版本号</td>
+</tr>
+<tr>
+<td style="text-align: left;">server_tel</td>
+<td style="text-align: left;">string</td>
+<td>客服电话</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>5.3、版本控制</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>版本控制</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/version</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">num</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示0：ios，1：安卓</td>
+</tr>
+<tr>
+<td style="text-align: left;">version</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>版本号</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;修改成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">groupid</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>6、十个模块--招商代理</h1><div style="margin-left:20px;"><h2>6.1、招商代理数据提交接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>招商代理数据提交接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_agents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:招分销2：招总代</td>
+</tr>
+<tr>
+<td style="text-align: left;">company</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>招商单位</td>
+</tr>
+<tr>
+<td style="text-align: left;">brand</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>经营品牌</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>经营区域</td>
+</tr>
+<tr>
+<td style="text-align: left;">acreage</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>面积要求</td>
+</tr>
+<tr>
+<td style="text-align: left;">policy</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>政策要求</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>提交图片路径 使用集合存储，然后json</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;添加成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>6.2、招商代理数据列表接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>招商代理数据列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_agents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>城市code</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:招分销2：招总代</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 13,
+        &quot;type&quot;: 1,
+        &quot;company&quot;: &quot;北京市局&quot;,
+        &quot;brand&quot;: &quot;马可波罗5&quot;,
+        &quot;area_name&quot;: &quot;北京&quot;,
+        &quot;acreage&quot;: 12,
+        &quot;policy&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+        &quot;photo&quot;: &quot;images/447c8391a877642385cd7e20ac325ba7.jpeg&quot;
+      },
+
+    ],
+    &quot;sum_page&quot;: 1,
+    &quot;now_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p>返回参数的说明在提交数据中参考</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>6.3、招商代理单条数据接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>招商代理单条数据接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_agents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询数据id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;type&quot;: 1,
+    &quot;company&quot;: &quot;北京市局&quot;,
+    &quot;brand&quot;: &quot;马可波罗5&quot;,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;acreage&quot;: 12,
+    &quot;policy&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+    &quot;photo&quot;: &quot;images/53905891927079b8e98891b47686c2b4.jpeg&quot;
+    &quot;created_at&quot;:''
+    &quot;now_time&quot;:''
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p>返回参数的说明在提交数据中参考</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>6.4、我发布的--招商列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--招商列表</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_agents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（1）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 20,
+        &quot;type&quot;: 1,
+        &quot;company&quot;: &quot;哈哈哈哈&quot;,
+        &quot;brand&quot;: &quot;古古怪怪&quot;,
+        &quot;area_name&quot;: &quot;北京&quot;,
+        &quot;acreage&quot;: 1000,
+        &quot;policy&quot;: &quot;还好还好哈&quot;,
+        &quot;photo&quot;: [
+          &quot;images/20181130/20181130191928-5c011cc09e9c4.png&quot;,
+          &quot;images/20181130/20181130191929-5c011cc109cf7.png&quot;,
+          &quot;images/20181130/20181130191929-5c011cc17967a.png&quot;,
+          &quot;images/20181130/20181130191929-5c011cc1c98dc.png&quot;
+        ]
+      },
+       ],
+    &quot;last_page&quot;: 1,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>6.5、我发布的--招商详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--招商详情</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_agents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>招商id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;type&quot;: 1,
+    &quot;company&quot;: &quot;北京市局&quot;,
+    &quot;brand&quot;: &quot;马可波罗&quot;,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;acreage&quot;: 12,
+    &quot;policy&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+    &quot;photo&quot;: [
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+    ],
+    &quot;created_at&quot;: 1542944106,
+    &quot;now_time&quot;: 1543910919
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p></div><h2>6.6、我发布的--招商删除</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--招商删除</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/del_my_agents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>招商id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>     {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;删除成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>7、十个小模块--寻租转租</h1><div style="margin-left:20px;"><h2>7.1、店铺类型</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>店铺类型接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/shop_type</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 6,
+      &quot;shop_type&quot;: &quot;饭店&quot;
+    },
+    {
+      &quot;id&quot;: 7,
+      &quot;shop_type&quot;: &quot;酒吧&quot;
+    },
+    {
+      &quot;id&quot;: 8,
+      &quot;shop_type&quot;: &quot;迪吧&quot;
+    },
+    {
+      &quot;id&quot;: 9,
+      &quot;shop_type&quot;: &quot;汽修&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>店铺类型标示</td>
+</tr>
+<tr>
+<td style="text-align: left;">shop_type</td>
+<td style="text-align: left;">string</td>
+<td>店铺名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>7.2、寻租转租数据提交接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>寻租转租数据提交接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_getrent_setrents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:店铺寻租2：店铺转租</td>
+</tr>
+<tr>
+<td style="text-align: left;">acreage</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>面积/平方</td>
+</tr>
+<tr>
+<td style="text-align: left;">money</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>日租金/元</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>房子位置（市）</td>
+</tr>
+<tr>
+<td style="text-align: left;">address</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>详细地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">start_time</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>转让起始日期</td>
+</tr>
+<tr>
+<td style="text-align: left;">set_money</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>转让费</td>
+</tr>
+<tr>
+<td style="text-align: left;">shops_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>店铺类型int()关联店铺类型表shops</td>
+</tr>
+<tr>
+<td style="text-align: left;">matching</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>商业配套(详细说明）</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系人姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系人电话</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>图片路径  使用集合存储，然后json</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;添加成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>7.3、寻租转租数据列表接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>寻租转租数据列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_getrent_setrents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询条数</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>城市code</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:店铺寻租2：店铺转租</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 38,
+        &quot;type&quot;: 1,
+        &quot;acreage&quot;: 11,
+        &quot;money&quot;: 3,
+        &quot;area_name&quot;: &quot;北京&quot;,
+        &quot;address&quot;: &quot;北京&quot;,
+        &quot;start_time&quot;: &quot;2018-10-10 09:09:09&quot;,
+        &quot;set_money&quot;: 110000,
+        &quot;shop_type&quot;: &quot;汽修&quot;,
+        &quot;matching&quot;: &quot;1&quot;,
+        &quot;contacts_name&quot;: &quot;小霍7&quot;,
+        &quot;contacts_tel&quot;: &quot;222222222&quot;,
+        &quot;photo&quot;: &quot;images/5701e3bcaea33256d3ed979488a5ce2b.jpeg&quot;
+      },
+
+    ],
+    &quot;sum_page&quot;: 12,
+    &quot;now_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<p>返回参数的说明在提交数据中参考</p></div><h2>7.4、寻租转租单条数据接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>寻租转租单条数据接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_getrent_setrents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询数据id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;type&quot;: 1,
+    &quot;acreage&quot;: 11,
+    &quot;money&quot;: 3,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;address&quot;: &quot;北京&quot;,
+    &quot;start_time&quot;: &quot;2018-10-10 09:09:09&quot;,
+    &quot;set_money&quot;: 110000,
+    &quot;shop_type&quot;: &quot;汽修&quot;,
+    &quot;matching&quot;: &quot;1&quot;,
+    &quot;contacts_name&quot;: &quot;小霍7&quot;,
+    &quot;contacts_tel&quot;: &quot;222222222&quot;,
+    &quot;photo&quot;: &quot;images/53905891927079b8e98891b47686c2b4.jpeg&quot;
+    &quot;created_at&quot;:''
+    &quot;now_time&quot;:''
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p>返回参数的说明在提交数据中参考</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>7.5、我发布的--寻租列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--寻租列表</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_getrent_setrents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（1）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 120,
+        &quot;type&quot;: 2,
+        &quot;acreage&quot;: 120,
+        &quot;money&quot;: 300,
+        &quot;area_name&quot;: &quot;北京&quot;,
+        &quot;address&quot;: &quot;别别别&quot;,
+        &quot;start_time&quot;: &quot;2031-09-30&quot;,
+        &quot;set_money&quot;: 10000,
+        &quot;shop_type&quot;: &quot;迪吧&quot;,
+        &quot;matching&quot;: &quot;将计就计&quot;,
+        &quot;contacts_name&quot;: &quot;密密麻麻吗&quot;,
+        &quot;contacts_tel&quot;: &quot;13222222222&quot;,
+        &quot;photo&quot;: [
+          &quot;images/20181130/20181130185430-5c0116e68542c.png&quot;,
+          &quot;images/20181130/20181130185430-5c0116e6c5f55.png&quot;,
+          &quot;images/20181130/20181130185431-5c0116e71c9ca.png&quot;,
+          &quot;images/20181130/20181130185431-5c0116e76bc32.png&quot;
+        ]
+      },
+      ],
+    &quot;last_page&quot;: 12,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>7.6、我发布的--寻租详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--寻租详情</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_getrent_setrents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>寻租id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;type&quot;: 1,
+    &quot;acreage&quot;: 11,
+    &quot;money&quot;: 3,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;address&quot;: &quot;北京&quot;,
+    &quot;start_time&quot;: &quot;2018-10-10 09:09:09&quot;,
+    &quot;set_money&quot;: 110000,
+    &quot;shop_type&quot;: &quot;汽修&quot;,
+    &quot;matching&quot;: &quot;1&quot;,
+    &quot;contacts_name&quot;: &quot;小霍1&quot;,
+    &quot;contacts_tel&quot;: &quot;222222222&quot;,
+    &quot;photo&quot;: [
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+    ],
+    &quot;created_at&quot;: 1542942372,
+    &quot;now_time&quot;: 1543909191
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>7.7、我发布的--寻租删除</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--寻租删除</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/del_my_getrent_setrents</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>寻租id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>    {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;删除成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>8、十个小模块--求职招聘</h1><div style="margin-left:20px;"><h2>8.1、求职招聘数据提交</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>求职招聘数据提交接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_job_recruits</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:求职，2:招聘)</td>
+</tr>
+<tr>
+<td style="text-align: left;">position</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>职位0：其他，1：业务员，2：导购，3：经理，4：副总经理，5：总经理,6：财务，7：后勤8：行政，9：人事专员，职位</td>
+</tr>
+<tr>
+<td style="text-align: left;">education</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>学历1：高中以下，2：高中，3：大专，4：本科，5：本科以</td>
+</tr>
+<tr>
+<td style="text-align: left;">experience</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>行业经验0:无，1：有</td>
+</tr>
+<tr>
+<td style="text-align: left;">experience_info</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>行业备注</td>
+</tr>
+<tr>
+<td style="text-align: left;">salary</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>薪资待遇1:3000以下，2：3000~5000，3：5000~8000 4：8000以上</td>
+</tr>
+<tr>
+<td style="text-align: left;">station_time</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>到岗时间1：随时，2：1一周内 3：一个月内</td>
+</tr>
+<tr>
+<td style="text-align: left;">sketch</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>简述</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>电话</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>图片路径 使用集合存储，然后json</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;添加成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>8.2、求职招聘数据列表接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>求职招聘数据列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_job_recruits</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>类型int(1:求职，2:招聘)</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询条数</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 6,
+        &quot;type&quot;: 17,
+        &quot;position&quot;: &quot;11&quot;,
+        &quot;education&quot;: 3,
+        &quot;experience&quot;: 3,
+        &quot;experience_info&quot;: &quot;工作一年&quot;,
+        &quot;salary&quot;: 1,
+        &quot;station_time&quot;: 110000,
+        &quot;sketch&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+        &quot;contacts_name&quot;: &quot;小霍&quot;,
+        &quot;contacts_tel&quot;: &quot;222222222&quot;,
+        &quot;photo&quot;: &quot;images/a3b7b6e76234bbfbdc49a7e94707968f.png&quot;
+      },
+
+    ],
+    &quot;sum_page&quot;: 12,
+    &quot;now_page&quot;: 1
+  }</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p>参数说明请参考提交数据参数</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>8.3、求职招聘单条数据接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_job_recruits</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;type&quot;: &quot;招聘&quot;,
+    &quot;position&quot;: &quot;业务员&quot;,
+    &quot;education&quot;: &quot;高中以下&quot;,
+    &quot;experience&quot;: &quot;有&quot;,
+    &quot;experience_info&quot;: &quot;1&quot;,
+    &quot;salary&quot;: &quot;3000以下&quot;,
+    &quot;station_time&quot;: &quot;随时&quot;,
+    &quot;sketch&quot;: &quot;1&quot;,
+    &quot;contacts_name&quot;: &quot;1&quot;,
+    &quot;contacts_tel&quot;: &quot;1&quot;,
+    &quot;photo&quot;: &quot;images/a3b7b6e76234bbfbdc49a7e94707968f.png&quot;,
+    &quot;created_at&quot;: 1542706702,
+    &quot;now_time&quot;: 1543369106
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p>参数说明请参考提交数据参数</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>8.4、我发布的--求职列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--求职列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_job_recruits</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（1）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>   &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 6,
+        &quot;type&quot;: &quot;招聘&quot;,
+        &quot;position&quot;: &quot;业务员&quot;,
+        &quot;education&quot;: &quot;大专&quot;,
+        &quot;experience&quot;: &quot;有&quot;,
+        &quot;experience_info&quot;: &quot;工作一年&quot;,
+        &quot;salary&quot;: &quot;3000以下&quot;,
+        &quot;station_time&quot;: &quot;随时&quot;,
+        &quot;sketch&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+        &quot;contacts_name&quot;: &quot;小霍&quot;,
+        &quot;contacts_tel&quot;: &quot;222222222&quot;,
+        &quot;photo&quot;: [
+          &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+          &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+          &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+        ]
+      },
+     …………
+    ],
+    &quot;last_page&quot;: 12,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>8.5、我发布的--求职详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--求职详情</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_job_recruits</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>求职id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;type&quot;: &quot;招聘&quot;,
+    &quot;position&quot;: &quot;业务员&quot;,
+    &quot;education&quot;: &quot;高中以下&quot;,
+    &quot;experience&quot;: &quot;有&quot;,
+    &quot;experience_info&quot;: &quot;1&quot;,
+    &quot;salary&quot;: &quot;3000以下&quot;,
+    &quot;station_time&quot;: &quot;随时&quot;,
+    &quot;sketch&quot;: &quot;1&quot;,
+    &quot;contacts_name&quot;: &quot;1&quot;,
+    &quot;contacts_tel&quot;: &quot;1&quot;,
+    &quot;photo&quot;: [
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+    ],
+    &quot;created_at&quot;: 1542706702,
+    &quot;now_time&quot;: 1543908710
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>8.6、我发布的--求职删除</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--求职删除</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/del_my_job_recruits</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>求职id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>    {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;删除成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>9、十个小模块---清仓特卖</h1><div style="margin-left:20px;"><h2>9.1、清仓特卖数据提交</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>清仓特卖数据提交</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_clearing_houses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">univalent</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>出售单价</td>
+</tr>
+<tr>
+<td style="text-align: left;">unit</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>选择单位(1:元/平方，2:元、片)</td>
+</tr>
+<tr>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>出售数量(0:数量不限，具体数量)</td>
+</tr>
+<tr>
+<td style="text-align: left;">company</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>单位(1:平米，2：片)</td>
+</tr>
+<tr>
+<td style="text-align: left;">mode</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>交货方式(1:自提，2：快递)</td>
+</tr>
+<tr>
+<td style="text-align: left;">invoice</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>是否含发票（1:是，0:否）</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>库房位置（市）</td>
+</tr>
+<tr>
+<td style="text-align: left;">address</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>详细地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">remarks</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>备注</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系人姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系人电话</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>上传后的图片地址(使用集合存储，然后json)</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;添加成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>9.2、清仓特卖单条数据查询</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>清仓特卖单条数据查询</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_clearing_houses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>查询数据id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;univalent&quot;: 17,
+    &quot;unit&quot;: 11,
+    &quot;number&quot;: 3,
+    &quot;company&quot;: 3,
+    &quot;mode&quot;: 3,
+    &quot;invoice&quot;: 1,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;address&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+    &quot;remarks&quot;: &quot;1&quot;,
+    &quot;contacts_name&quot;: &quot;2&quot;,
+    &quot;contacts_tel&quot;: &quot;2&quot;,
+    &quot;photo&quot;: &quot;images/53905891927079b8e98891b47686c2b4.jpeg&quot;
+    &quot;created_at&quot;:''
+    &quot;now_time&quot;:''
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">univalent</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>出售单价</td>
+</tr>
+<tr>
+<td style="text-align: left;">unit</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>选择单位(1:元/平方，2:元、片)</td>
+</tr>
+<tr>
+<td style="text-align: left;">number</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>出售数量(0:数量不限，具体数量)</td>
+</tr>
+<tr>
+<td style="text-align: left;">company</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>单位(1:平米，2：片)</td>
+</tr>
+<tr>
+<td style="text-align: left;">mode</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>交货方式(1:自提，2：快递)</td>
+</tr>
+<tr>
+<td style="text-align: left;">invoice</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>是否含发票（1:是，0:否）</td>
+</tr>
+<tr>
+<td style="text-align: left;">area_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>库房位置（市）</td>
+</tr>
+<tr>
+<td style="text-align: left;">address</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>详细地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">remarks</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>备注</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系人姓名</td>
+</tr>
+<tr>
+<td style="text-align: left;">contacts_tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>联系人电话</td>
+</tr>
+<tr>
+<td style="text-align: left;">photo</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>上传后的图片地址</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>创建时间</td>
+</tr>
+<tr>
+<td style="text-align: left;">now_time</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>服务器时间</td>
+</tr>
+</tbody>
+</table>
+<p>返回参数的说明在清仓特卖提交数据中参考</p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>9.3、清仓特卖数据列表查询</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>清仓特卖数据列表查询接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_clearing_houses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">now_page</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+<tr>
+<td style="text-align: left;">room_city</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>城市code</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 103,
+        &quot;univalent&quot;: 17,
+        &quot;unit&quot;: 11,
+        &quot;number&quot;: 3,
+        &quot;company&quot;: 3,
+        &quot;mode&quot;: 3,
+        &quot;invoice&quot;: 1,
+        &quot;area_name&quot;: &quot;北京&quot;,
+        &quot;address&quot;: &quot;&amp;lt;script&amp;gt;alert(1)&amp;lt;/script&amp;gt;&quot;,
+        &quot;remarks&quot;: &quot;1&quot;,
+        &quot;contacts_name&quot;: &quot;2&quot;,
+        &quot;contacts_tel&quot;: &quot;2&quot;,
+        &quot;photo&quot;: &quot;images/a3b7b6e76234bbfbdc49a7e94707968f.png&quot;
+      }
+     ……
+    ],
+    &quot;sum_page&quot;: 10,
+    &quot;now_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">last_page</td>
+<td style="text-align: left;">int</td>
+<td>总页数</td>
+</tr>
+<tr>
+<td style="text-align: left;">current_page</td>
+<td style="text-align: left;">int</td>
+<td>当前页</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<p>返回参数的说明在清仓特卖提交数据中参考</p></div><h2>9.4、我发布的--清仓详情</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的-清仓详情接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_clearing_houses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>清仓id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 3,
+    &quot;univalent&quot;: 1,
+    &quot;unit&quot;: 2,
+    &quot;number&quot;: 1,
+    &quot;company&quot;: 2,
+    &quot;mode&quot;: 2,
+    &quot;invoice&quot;: 1,
+    &quot;area_name&quot;: &quot;北京&quot;,
+    &quot;address&quot;: &quot;北京市宋家庄扑满山大楼&quot;,
+    &quot;remarks&quot;: &quot;促销服务&quot;,
+    &quot;contacts_name&quot;: &quot;霍文俊&quot;,
+    &quot;contacts_tel&quot;: &quot;15210217123&quot;,
+    &quot;photo&quot;: [
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+      &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+    ],
+    &quot;created_at&quot;: 1542693123,
+    &quot;now_time&quot;: 1543908157
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>9.5、我发布的--清仓列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--清仓列表接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_my_clearing_houses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">f</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>标示（1）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;查询成功&quot;,
+  &quot;data&quot;: {
+    &quot;data&quot;: [
+      {
+        &quot;id&quot;: 67,
+        &quot;univalent&quot;: 17,
+        &quot;unit&quot;: 11,
+        &quot;number&quot;: 3,
+        &quot;company&quot;: 3,
+        &quot;mode&quot;: 2,
+        &quot;invoice&quot;: 1,
+        &quot;area_name&quot;: &quot;北京&quot;,
+        &quot;address&quot;: &quot;北京市宋家庄扑满山大楼&quot;,
+        &quot;remarks&quot;: &quot;促销服务&quot;,
+        &quot;contacts_name&quot;: &quot;霍文俊&quot;,
+        &quot;contacts_tel&quot;: &quot;15210217123&quot;,
+        &quot;photo&quot;: [
+          &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+          &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+          &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+        ]
+      },
+      …………
+    ],
+    &quot;last_page&quot;: 10,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>9.6、我发布的--删除清仓</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>我发布的--删除清仓接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/del_my_clearing_houses</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>清仓id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;删除成功&quot;,
+  &quot;data&quot;: {}
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>10、我的</h1><div style="margin-left:20px;"><h2>10.1、登录</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户登录接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/login</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">openid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>微信用户openid（微信登录传此参数）</td>
+</tr>
+<tr>
+<td style="text-align: left;">tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号</td>
+</tr>
+<tr>
+<td style="text-align: left;">password</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>用户类型（0:客户的，1：商家端）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>   {
+  &quot;code&quot;: 401,
+  &quot;message&quot;: &quot;登录失败&quot;,
+  &quot;data&quot;: false
+  }
+  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;登录成功&quot;,
+  &quot;data&quot;: {
+    &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImZhOTU2YTA0YmExYTQ1ZGY3MmJlYTNkYjM5MzZhNjUwZjAwMzEzNzRkM2M1M2Q1NDBhYWIwZTEzOTZjYzZiMGUxZGIzYTM3YTA3Mzc0ZDExIn0.eyJhdWQiOiI0IiwianRpIjoiZmE5NTZhMDRiYTFhNDVkZjcyYmVhM2RiMzkzNmE2NTBmMDAzMTM3NGQzYzUzZDU0MGFhYjBlMTM5NmNjNmIwZTFkYjNhMzdhMDczNzRkMTEiLCJpYXQiOjE1NDI2NzYwMzYsIm5iZiI6MTU0MjY3NjAzNiwiZXhwIjoxNTc0MjEyMDM2LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.oNiFa1wrap4-BPtR5ZYWj4q6F5qvAWUzNo_ynIyeF_dQa_U2UMKh9MnETFlL-EDjV7JYX_bkJvyK1y6Fyk5Yq1tBkyVis0_1HeRjju7kPjB3hCLFbpr18_4zWTWE9x63lvh9ExpTw0Lc4L-6_YFRAZTaiqmaubVd-CE7OZucVdVmFdZfgR43sTDQ0-S0DkxsLKyWSRE9oaQLShCS3wAvYWHUHbeULcDP4zjJfzEGr4anAEtkgAos_AyRYp0wvkUPd-cSKH4a52p8cYN366gbAkI3o-w7CyvD6VeBgltygAXFIO4lxvE-ED1PMqFGYlRDsNvgQxlqG6j9kdp92MVemrELD_aB8PCTCEP8B1cVdB-aV8LoeEHVot-NK4fy1urZHPj5ysPLSoU014qe-hr_cAtC3m4b23VjnTSBwlb7TCKIpttsazrdT8Rgzj6zagNuaK2J-Bd7BKMkccK8A6D5zgdg3Bgu2qCOlukUhwEWAg9fcmR6ow5YxWdc2RX8lg8vqKOTVqijMIZ8FgwQELpd8zwWXXJwwDyLvvu3IdUaWwt6mj0i_6HK4JbUEefCMkZwiMWsC3invhXRLpi5UcOEnmDEL-HA7yVsrXOSMhE_sqfjFdJrsWbfNiQOEytkIGwDAcEpbm26o57gkRhD1CCLO107j9d9S5tM6sPN2z17nX0&quot;,
+    &quot;name&quot;: &quot;root&quot;,
+    &quot;user_id&quot;: 1,
+    &quot;img&quot;: &quot;123&quot;
+  }
+}
+或者
+{
+  &quot;code&quot;: 201,
+  &quot;message&quot;: &quot;请绑定手机号&quot;,
+  &quot;data&quot;: &quot;123456789&quot;
+}
+{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;登录成功&quot;,
+  &quot;data&quot;: {
+    &quot;user_id&quot;: 16,
+    &quot;name&quot;: null,
+    &quot;status&quot;: 0,
+    &quot;token&quot;: null,
+    &quot;img&quot;: null
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码：200：成功，201：微信授权成功，绑定手机号，401：失败</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>描述性话术</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_id</td>
+<td style="text-align: left;">int</td>
+<td>用户id</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>用户名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">int</td>
+<td>用户类型</td>
+</tr>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>用户头像</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>10.2、绑定手机号</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>绑定手机号接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com//api/bind_tel</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号</td>
+</tr>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>验证码</td>
+</tr>
+<tr>
+<td style="text-align: left;">openid</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>微信用户openid</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;status&quot;: false,
+  &quot;code&quot;: 70002,
+  &quot;message&quot;: &quot;验证码不存在&quot;,
+  &quot;data&quot;: []
+}
+{
+  &quot;status&quot;: false,
+  &quot;code&quot;: 70001,
+  &quot;message&quot;: &quot;验证码失效&quot;,
+  &quot;data&quot;: []
+}
+或者
+{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;绑定成功&quot;,
+  &quot;data&quot;: {
+    &quot;user_id&quot;: 16,
+    &quot;name&quot;: null,
+    &quot;status&quot;: 0,
+    &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjkzNzE3Yzk3NTBkNTE5ZWYxNGRmMmIwMTdkYmQ3NTdiNTE5MjhlNjcyMDJiNzJmODliOTZjY2MwMjIyZGI3Yzc5ODMwOTJlY2UxODA3YjQxIn0.eyJhdWQiOiI0IiwianRpIjoiOTM3MTdjOTc1MGQ1MTllZjE0ZGYyYjAxN2RiZDc1N2I1MTkyOGU2NzIwMmI3MmY4OWI5NmNjYzAyMjJkYjdjNzk4MzA5MmVjZTE4MDdiNDEiLCJpYXQiOjE1NDI2Nzg2ODUsIm5iZiI6MTU0MjY3ODY4NSwiZXhwIjoxNTc0MjE0Njg1LCJzdWIiOiIiLCJzY29wZXMiOltdfQ.PepYofcvIHong-nPlosCky8CxDgyVvl5K6F-V5X_bIqFirMQLkNi6Jvy_P8lhC8PgbNUvxgKxbLr6lNInAcsGhKiUtHMAMUJV7Yp22VIn4lOp_8bSYTpuF35bpxtOMrr5AFRo6lNaOizK0XXyQgAWviR96fTYtng4USpGgyUN6L-VOOFtPXO4WFXIt6Yh6juHfYS3B2_fRJSBghTXqcHNqoPoBgd1jdU9ddw7OC7X_ghe03YFbLdm0GLChXHhoxAMOPo8v-DEtewyynq21mXF0OiObOMlApovU2zOk4Y6dgcpZ-nZjWXpxzcpWbQ3lGnBxiBkFOPJPFDRZGT2uKf_-k-IFVzuSKUed58y3rk7ul12UdlOBJ7w02krkWS-0gUmfuo7Q9_WbEhDyKs7loweQgcf7Cb-MKtTdI30y1sO3UU5X10EsAkiXVro_h2xgNf5zyUrKXTubZa1sytTdxzjMPesHtqkgxyjzYmrhcE5k17DKFCe4ZzOqGbFoW3R9kJDSnWrPVr7rnSLFZjkdUt4XBkRcjVmfygPrnw_Pdy-kto157CJpWX6WUrSnKLWz0P0AUFEcbRd8vag0PBwnYZiSxd2qn8Wq3i8vuBELEpGmNhdng6lGdN_bxa95Zy1dL8AWatbh1-_zUB6wtal5XMedjyE0T1c2lLMEWXq4G1TNU&quot;,
+    &quot;img&quot;: null
+  }
+}
+{
+  &quot;code&quot;: 401,
+  &quot;message&quot;: &quot;绑定失败&quot;,
+  &quot;data&quot;: 0
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">int/bool</td>
+<td>类型</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>话术</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_id</td>
+<td style="text-align: left;">int</td>
+<td>用户id</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>用户名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">string</td>
+<td>用户头像</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>10.3、验证码接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>验证码接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/verify</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号码</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>发送类型（1=注册，2=登陆，3=找回密码 4=绑定手机号 5=修改密码）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 1,
+  &quot;message&quot;: &quot;发送成功&quot;,
+  &quot;data&quot;: null
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">groupid</td>
+<td style="text-align: left;">int</td>
+<td>用户组id，1：超级管理员；2：普通用户</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>10.4、修改密码/忘记密码</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>修改密码/忘记密码接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/password_back</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号码</td>
+</tr>
+<tr>
+<td style="text-align: left;">password</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>验证码</td>
+</tr>
+<tr>
+<td style="text-align: left;">type</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>3找回密码，5修改密码</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>    &quot;code&quot;: 1,
+    &quot;message&quot;: &quot;添加成功&quot;,
+    &quot;data&quot;: {
+    &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6ImQ2MWU3YWU5OGVkYTRiNzBkYTVmYTYxMGViNTZjNTlkM2FjZjkyZDZmYTk3ZmIyZWFhNGRhZTZiZGE4ZDY5Yjg0Nzc1YTdlMTE1ZjAxOWQzIn0.eyJhdWQiOiI0IiwianRpIjoiZDYxZTdhZTk4ZWRhNGI3MGRhNWZhNjEwZWI1NmM1OWQzYWNmOTJkNmZhOTdmYjJlYWE0ZGFlNmJkYThkNjliODQ3NzVhN2UxMTVmMDE5ZDMiLCJpYXQiOjE1NDI2ODAwMjQsIm5iZiI6MTU0MjY4MDAyNCwiZXhwIjoxNTc0MjE2MDI0LCJzdWIiOiIxNyIsInNjb3BlcyI6W119.LC6NTF4Cko3TqSzm3UHmZV7_QgNvoJbzmNF5mT1hjSouZoX6py5snqDm5QbIzlmuj5jfsWmiQQ97BjDEqpDqiIB7_vYq9eAPHL4b6d05geqQe62mSHplvdMJo8gZ6nO6woILuveL9SgL_08yDA5vlBLQPIh4SzN3ML0zshwFTqYt3ciLKS3oiFHfHjIkRJHhvePOfsAY6-RZMExbR4OwDM8oeGY8t9byxZfSjm-Y2LnqgLOv6kFCIG6HgwMxzDSxBMyp5g_d0bvmbL8Nw8AHMG3y1DXdmWQ2ebE-GjI9yM6rEvggvqfEZRrfTxvQw_JvFIlqhRuz7XGAgI-Sh9Pzmu84nIuffcLsEQHNiToeaM98Ad8Z6MmOkp75Cn0BF8JctNorWs6eMr647Hy2anGDaP_rcsvzdPNQ2OLU-EXLOpEfe7FJN7X0jEbivmbp0XZwfHLTPRbU3TsVgadTfU1HIw3mLf-NDSjD1GnaIR7LiCgniFg_9q8RpJxPkutxzUVGZNFPcONSUJ-oHpQutSTFXDtgUj_fX7UChDc58-Y15UiloqsEAiYHBrtJj-fWYjIylJPN4X3OVl0I-k1zyeRTayweSgtZWRCP8_6okJqSbBs51rWhCMHjbIigfzIO-6kNze_ax_j3k7psvtYBHIEeWNOSc66CFxVzGGbb09wxOFY&quot;,
+    &quot;name&quot;: null,
+    &quot;user_id&quot;: 17
+  }</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>10.5、个人资料编辑</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/users_info_edit</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">img</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>昵称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 401,
+  &quot;message&quot;: &quot;用户不存在&quot;,
+  &quot;data&quot;: 0
+}
+{
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;修改成功&quot;,
+  &quot;data&quot;: {
+    &quot;name&quot;: &quot;root&quot;,
+    &quot;img&quot;: &quot;123&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>10.6、注册</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/register</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">tel</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>手机号码</td>
+</tr>
+<tr>
+<td style="text-align: left;">password</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>密码</td>
+</tr>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>验证码</td>
+</tr>
+<tr>
+<td style="text-align: left;">referral_code</td>
+<td style="text-align: left;">否</td>
+<td style="text-align: left;">string</td>
+<td>推荐码（有推荐码传值，没有不传）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;status&quot;: true,
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;成功&quot;,
+  &quot;data&quot;: {
+    &quot;token&quot;: &quot;eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiIsImp0aSI6IjJjZTE1ZmE3MTQ0NThjZTcxMzRjODYzNGIyYjgyNjUzNGEzMjY5YWZjZTZlOGE0YjhhMThhZDliYjQ0YTQ1MTMxYmQyM2VhMGFlMGY4N2NkIn0.eyJhdWQiOiI0IiwianRpIjoiMmNlMTVmYTcxNDQ1OGNlNzEzNGM4NjM0YjJiODI2NTM0YTMyNjlhZmNlNmU4YTRiOGExOGFkOWJiNDRhNDUxMzFiZDIzZWEwYWUwZjg3Y2QiLCJpYXQiOjE1NDI3NjQ3ODksIm5iZiI6MTU0Mjc2NDc4OSwiZXhwIjoxNTc0MzAwNzg5LCJzdWIiOiIyNyIsInNjb3BlcyI6W119.ZpoQaamorVv6iLtSZ69yImeWoq_V2B_aM5TkcWQZN05Sm6ZqdWabfl1tiP__iFstpWdw35EsrpI4F8jTRRLl3HK65SbsXTZ1pe91UsKr5g3Cg4tQFa&quot;,
+    &quot;name&quot;: null,
+    &quot;user_id&quot;: 27
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">status</td>
+<td style="text-align: left;">int</td>
+<td>true：成功，false：失败</td>
+</tr>
+<tr>
+<td style="text-align: left;">code</td>
+<td style="text-align: left;">int</td>
+<td>状态码</td>
+</tr>
+<tr>
+<td style="text-align: left;">message</td>
+<td style="text-align: left;">string</td>
+<td>术语</td>
+</tr>
+<tr>
+<td style="text-align: left;">token</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">string</td>
+<td>用户名</td>
+</tr>
+<tr>
+<td style="text-align: left;">user_id</td>
+<td style="text-align: left;">int</td>
+<td>用户id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>10.7、获取个人资料</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>用户注册接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/get_user_info</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;个人资料&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 17,
+    &quot;name&quot;: &quot;霍文俊&quot;,
+    &quot;tel&quot;: &quot;15210217123&quot;,
+    &quot;status&quot;: 0,
+    &quot;img&quot;: &quot;images/20181127/c7204abb8b46287c0f7eb2eb9303f871.jpg&quot;
+    &quot;brick_age&quot;: 26
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div><h1>11、找砖</h1><div style="margin-left:20px;"><h2>11.1、属性工艺列表</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>属性工艺列表</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/technology</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;工艺列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 7,
+      &quot;name&quot;: &quot;抛光&quot;
+    },
+    {
+      &quot;id&quot;: 8,
+      &quot;name&quot;: &quot;瓷片&quot;
+    },
+    {
+      &quot;id&quot;: 9,
+      &quot;name&quot;: &quot;手工&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.2、属性表面</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>属性表面</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/surface</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;表面列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 48,
+      &quot;name&quot;: &quot;亮光面&quot;
+    },
+    {
+      &quot;id&quot;: 49,
+      &quot;name&quot;: &quot;柔光面&quot;
+    },
+    {
+      &quot;id&quot;: 50,
+      &quot;name&quot;: &quot;亚光面&quot;
+    },
+    {
+      &quot;id&quot;: 51,
+      &quot;name&quot;: &quot;其他&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.3、属性适用范围</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>属性适用范围</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/appropriate</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;适用范围列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 53,
+      &quot;name&quot;: &quot;不限&quot;
+    },
+    {
+      &quot;id&quot;: 54,
+      &quot;name&quot;: &quot;内墙砖&quot;
+    },
+    {
+      &quot;id&quot;: 55,
+      &quot;name&quot;: &quot;地砖&quot;
+    },
+    {
+      &quot;id&quot;: 56,
+      &quot;name&quot;: &quot;广场砖&quot;
+    },
+    {
+      &quot;id&quot;: 57,
+      &quot;name&quot;: &quot;外墙砖&quot;
+    },
+    {
+      &quot;id&quot;: 58,
+      &quot;name&quot;: &quot;其他&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.4、生产厂商属性</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>生产厂商属性</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/production_manu</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;生产厂商列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 60,
+      &quot;name&quot;: &quot;国内&quot;
+    },
+    {
+      &quot;id&quot;: 61,
+      &quot;name&quot;: &quot;合资&quot;
+    },
+    {
+      &quot;id&quot;: 62,
+      &quot;name&quot;: &quot;进口&quot;
+    }
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.5、配件接口</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>配件接口</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/user/register</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;配件属性列表&quot;,
+  &quot;data&quot;: [
+    {
+      &quot;id&quot;: 64,
+      &quot;name&quot;: &quot;不限&quot;
+    },
+    {
+      &quot;id&quot;: 65,
+      &quot;name&quot;: &quot;腰线&quot;
+    },
+
+  ]
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.6、展示品牌详情---基本信息</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>展示品牌详情---基本信息</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/brand_info</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>品牌ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;品牌基本信息&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 3,
+    &quot;name&quot;: &quot;测试-------马可波罗&quot;,
+    &quot;images&quot;: [
+      &quot;images/de963fedb7e5adc2aad5141bc0d8bb25.jpg&quot;,
+      &quot;images/bd1184d19717af4f9d64a570aff1e0c3.jpg&quot;,
+      &quot;images/f1bf9c008bd652d6e6fa99a000079b47.jpg&quot;
+    ],
+    &quot;trade_mark&quot;: &quot;images/002655487b620cd084c23f803813844c.jpg&quot;,
+    &quot;avg_evaluate&quot;: &quot;3.8&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>品牌ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">name</td>
+<td style="text-align: left;">int</td>
+<td>品牌名称</td>
+</tr>
+<tr>
+<td style="text-align: left;">images</td>
+<td style="text-align: left;">list</td>
+<td>品牌轮播</td>
+</tr>
+<tr>
+<td style="text-align: left;">trade_mark</td>
+<td style="text-align: left;">str</td>
+<td>品牌商标</td>
+</tr>
+<tr>
+<td style="text-align: left;">avg_evaluate</td>
+<td style="text-align: left;">str</td>
+<td>总体评价（用户评价）</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.7、品牌介绍</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>品牌介绍</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/brand_introduce</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>品牌名称</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;品牌介绍&quot;,
+  &quot;data&quot;: {
+    &quot;id&quot;: 3,
+    &quot;description&quot;: &quot;马可波罗瓷砖是广东唯美陶瓷有限公司主打产品，总部位于现代制造业名城——东莞市，是国内规模最大的建筑陶瓷制造商和销售商之一。\r\n“马可波罗”品牌诞生于1996年，作为国内最早品牌化的建陶品牌，以“文化陶瓷”占领市场，享有“仿古砖至尊”的美誉。被中国陶瓷卫浴品牌网评选为2013年中国陶瓷十大品牌，是国内建陶产品系列最全的品牌。企业拥有380多项专利，其自主研发的原创设计──“中国印象”系列产品，将中国传统文化之精髓展现在瓷砖上，引导设计之风回归东方禅韵，受到国内外消费者和专家的广泛关注。&quot;,
+    &quot;link&quot;: &quot;http://cloudbrickcity.cn/admin/brand/create&quot;,
+    &quot;honors&quot;: [
+      &quot;images/ace31d1850abefc152366bed44460562.jpeg&quot;,
+      &quot;images/bdd5a9b506637a58ad9d2968a3fa5b62.png&quot;,
+      &quot;images/index_img16.png&quot;
+    ],
+    &quot;service_tel&quot;: &quot;444-4444-444&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">id</td>
+<td style="text-align: left;">int</td>
+<td>品牌介绍标示</td>
+</tr>
+<tr>
+<td style="text-align: left;">description</td>
+<td style="text-align: left;">str</td>
+<td>简介</td>
+</tr>
+<tr>
+<td style="text-align: left;">link</td>
+<td style="text-align: left;">str</td>
+<td>官网</td>
+</tr>
+<tr>
+<td style="text-align: left;">honors</td>
+<td style="text-align: left;">str</td>
+<td>荣誉图片</td>
+</tr>
+<tr>
+<td style="text-align: left;">service_tel</td>
+<td style="text-align: left;">str</td>
+<td>电话</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.8、品牌评论数据</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>品牌评论数据</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/brand_evaluate</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>品牌ID</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code> {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;品牌评论数据&quot;,
+  &quot;data&quot;: {
+    &quot;list&quot;: [
+      {
+        &quot;users_name&quot;: &quot;霍文俊&quot;,
+        &quot;users_img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;,
+        &quot;content&quot;: &quot;测试评论品牌&quot;,
+        &quot;grade&quot;: &quot;4.5&quot;,
+        &quot;brand_id&quot;: 3,
+        &quot;created_at&quot;: &quot;2018-12-03 15:02:49&quot;
+      },
+      …………
+    ],
+    &quot;last_page&quot;: 1,
+    &quot;current_page&quot;: 1
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">users_name</td>
+<td style="text-align: left;">str</td>
+<td>发布者</td>
+</tr>
+<tr>
+<td style="text-align: left;">users_img</td>
+<td style="text-align: left;">str</td>
+<td>发布者头像</td>
+</tr>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">str</td>
+<td>发布内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">grade</td>
+<td style="text-align: left;">str</td>
+<td>星级</td>
+</tr>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">int</td>
+<td>品牌ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">created_at</td>
+<td style="text-align: left;">str</td>
+<td>发布时间</td>
+</tr>
+</tbody>
+</table>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div><h2>11.9、品牌评论提交</h2><div style="margin-left:20px;"><p><strong>简要描述：</strong> </p>
+<ul>
+<li>品牌评论提交</li>
+</ul>
+<p><strong>请求URL：</strong> </p>
+<ul>
+<li><code>http://xx.com/api/set_brand_evaluate</code></li>
+</ul>
+<p><strong>请求方式：</strong></p>
+<ul>
+<li>POST </li>
+</ul>
+<p><strong>参数：</strong> </p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">参数名</th>
+<th style="text-align: left;">必选</th>
+<th style="text-align: left;">类型</th>
+<th>说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;">content</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>评论内容</td>
+</tr>
+<tr>
+<td style="text-align: left;">grade</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">string</td>
+<td>星级</td>
+</tr>
+<tr>
+<td style="text-align: left;">brand_id</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">int</td>
+<td>品牌ID</td>
+</tr>
+<tr>
+<td style="text-align: left;">api_token</td>
+<td style="text-align: left;">是</td>
+<td style="text-align: left;">str</td>
+<td>token</td>
+</tr>
+</tbody>
+</table>
+<p><strong>返回示例</strong></p>
+<pre><code>  {
+  &quot;code&quot;: 200,
+  &quot;message&quot;: &quot;添加成功&quot;,
+  &quot;data&quot;: {
+    &quot;content&quot;: &quot;测试&quot;,
+    &quot;grade&quot;: &quot;1&quot;,
+    &quot;brand_id&quot;: &quot;3&quot;,
+    &quot;users_name&quot;: &quot;霍文俊&quot;,
+    &quot;users_img&quot;: &quot;images/c154f19fb70dde88c81820db183c7e86.jpeg&quot;
+  }
+}</code></pre>
+<p><strong>返回参数说明</strong> </p>
+<p><strong>备注</strong> </p>
+<ul>
+<li>更多返回错误代码请看首页的错误代码描述</li>
+</ul></div></div></body></html>

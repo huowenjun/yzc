@@ -1,0 +1,12 @@
+composer config -g repo.packagist composer https://packagist.laravel-china.org
+yum install -y  php71w-mysql.x86_64   php71w-gd.x86_64   php71w-ldap.x86_64   php71w-mbstring.x86_64  php71w-mcrypt.x86_64
+yum install -y php71w-fpm
+
+
+
+
+https://blog.csdn.net/aa814256/article/details/80569416
+
+
+
+You can also add it manually later by using "composer config --global --auth github-oauth.github.com <token>"

@@ -1,0 +1,3 @@
+INSERT INTO `system_message`(`id`, `title`, `content`, `type`, `u_id`, `status`, `img`, `ctime`, `utime`) VALUES (1, '系统通知', '系统消息', 1, 0, 1, 'images/9da9a763e698b71fdf3f14390c2c19f6.jpg', '1544002310', '1544002450');
+INSERT INTO `system_message`(`id`, `title`, `content`, `type`, `u_id`, `status`, `img`, `ctime`, `utime`) VALUES (2, '推荐消息', '推荐消息', 2, 0, 1, 'images/9da9a763e698b71fdf3f14390c2c19f6.jpg', '1544002310', '1544002450');
+INSERT INTO `system_message`(`id`, `title`, `content`, `type`, `u_id`, `status`, `img`, `ctime`, `utime`) VALUES (6, '1111', '111', 1, 0, 1, '', '1544098373', '1544098373');

@@ -1,0 +1,123 @@
+@charset "utf-8";
+/* CSS Document */
+html{font-size: 62.5%}
+@media only screen and (min-width: 481px) {
+	html{font-size: 94% !important;/* 10（480÷320）÷16=94% */}
+}
+@media only screen and (min-width: 561px) {
+	html{font-size: 109% !important;/* 10（480÷320）÷16=94% */}
+}
+@media only screen and (min-width:641px ) {
+	html{font-size: 125% !important;/* 10（480÷320）÷16=94% */}
+
+}
+@media (max-width:756px){
+	/*td span{font-size:0.12rem!important;}*/
+}
+table{border-collapse: collapse;width: 100%!important;}
+	td{border:0.01rem solid #DDD;}
+*{ font-size: 0.32rem; margin: 0; padding: 0; font-family: 'PingFangSC';}
+li{list-style: none;}
+a{text-decoration: none;}
+/*专业详情页*/
+.head1{ height: 1.28rem; overflow: hidden; text-align: center; line-height: 1.6rem; padding: 0 0.22rem; color: #333333; background: #fff;}
+.head1 img{ vertical-align: middle; margin-top: 0.66rem;}
+.img_left{ width:0.22rem; height: 0.32rem; float: left;}
+.fenxiang{ width:0.32rem; height: 0.32rem; float: right;}
+.comment{ width:100%;}
+.title{ padding: 0 0.22rem; margin: auto; border-bottom: 1px solid #EFEFEF; padding-bottom: 0.23rem;}
+.titles{ color: #333333; margin-left: 0.23rem; margin-top: 0.39rem;}
+.school{ margin-top: 0.25rem; overflow: hidden;}
+.school img{ width:0.97rem; height: 0.88rem; margin-left: 0.23rem; float: left;}
+.school span{ float: left; width:80%; font-size: 0.2rem; color: #999999; margin-top: 0.06rem; margin-left: 0.13rem;}
+.inform{ margin-top: 0.29rem; padding: 0 0.22rem;}
+.inform .in_tit{ border-left: 0.04rem solid #FD5823; height: 0.32rem; line-height: 0.32rem; font-size: 0.3rem; text-indent: 0.2rem; margin-bottom: 0.26rem;}
+.mat1{ margin-top: 0.53rem;}
+.in_con{ line-height: 0.5rem; font-size: 0.26rem;}
+.in_con label{ font-size: 0.26rem; margin-left: 0.25rem; color: #999999;}
+.in_con span{ font-size: 0.26rem;}
+.disla{ padding-left: 0.22rem; font-size: 0.26rem; text-align:justify; text-justify:inter-ideograph;}
+.kaodian{width:calc(100% - 0.44rem); margin: auto; font-size: 0.26rem; color: #FD5823; border-bottom: 1px solid #DDDDDD; padding-bottom: 0.1rem;}
+.kaodian span{ display: inline-block; font-size: 0.22rem; text-align: center; color: #fff; width:1.08rem; height: 0.36rem; line-height: 0.36rem; background: #FD5823; border-radius: 0.06rem; float: right;}
+.anpai{padding-left: 0.22rem; font-size: 0.26rem; line-height: 0.5rem;}
+.anpai .an_con{font-size: 0.26rem; text-align:justify; text-justify:inter-ideograph;}
+.anpai label{ font-size: 0.26rem; color: #999999;}
+/*专业详情页*/
+/*招生章程-详情*/
+.zhao_con{width:calc(100% - 1.08rem); margin: auto; color: #333; font-size: 0.32rem;}
+.zhao_tit{ margin-top: 0.2rem; color: #333;}
+.zhao_con .school img{ margin-left:0 ;}
+.zhao_con .one{ font-size: 0.28rem; line-height: 0.5rem; text-align:justify; text-justify:inter-ideograph; margin-top: 0.5rem;}
+/*招生章程-详情*/
+/*院校详情*/
+.head2{ height: 3rem; background: url(../images/yu_bg.png)no-repeat left top; background-size: 100%;}
+.he_dl{ width:calc(100% - 0.44rem); padding-top: 0.7rem; margin: auto; overflow: hidden;}
+.he_dl dt{ width:1.46rem; height: 1.44rem; float: left; margin-right: 0.3rem;}
+.he_dl dt img{ width: 100%; height: auto; border-radius: 50%;}
+.he_dl dd{ float: left; color: #A6C5FF;}
+.he_dl dd div{ line-height: 0.3rem;}
+.sm_tit{ font-size: 0.32rem; color: #DEE9FF;}
+.sm_address{ font-size: 0.26rem; color: #A6C5FF; margin: 0.22rem 0;}
+.sm_address img{ width:0.16rem; height: 0.2rem; margin-right: 0.12rem;}
+.sm_type span{padding: 0.05rem 0.13rem; font-size: 0.24rem; color: #A6C5FF; background: #256DF6; border-radius: 0.06rem; margin-right: 0.07rem;}
+.results{ height: 1.2rem; overflow: hidden; background: #fff; border-top-left-radius: 0.1rem;border-top-right-radius: 0.1rem; position: relative; top: -10px; left: 0;}
+.wenhua{ width:33.33%; float: left;}
+.wenhua span{ display: block; text-align: center;height: 0.38rem;line-height: 0.38rem}
+.wenhua span:first-child{font-size: 0.3rem; color: #333333; margin-top: 0.23rem;}
+.wenhua span:last-child{ font-size: 0.26rem; color: #777777;}
+.real{ background: #fff;}
+.realy{ overflow: hidden; margin-left: 0.3rem;}
+.realy li{ float: left; font-size: 0.3rem; margin-right: 0.38rem; line-height: 0.8rem; color: #A0A2A3;}
+.realy .checked{ border-bottom: 0.03rem solid #FDEF03; color: #333333;}
+.tiku li{ width: calc(100% - 0.44rem); border-bottom: 1px solid #DDDDDD; margin: auto;}
+.tiku li a{display: block; color: #333333; font-size: 0.28rem; overflow: hidden; line-height: 1rem;}
+.tiku li span{ font-size: 0.26rem; display: inline-block;}
+.tiku .zhen{width:0.68rem; height: 0.36rem; line-height: 0.37rem; color: #FFFEFE; background: #F34949; border-radius: 0.1rem; text-align: center; margin-right: 0.2rem; float: left; margin-top: 0.32rem;}
+.tiku li img{ width:0.13rem; height: 0.24rem; float: right; margin-top: 0.37rem;}
+.zhen_tit{ width:85%; overflow:hidden;text-overflow:ellipsis;white-space: nowrap; float: left;}
+.tiku li .more,.mores{display: block; width:3.34rem; height: 0.6rem; line-height: 0.6rem; color: #FCB826; border: 1px solid #FCB826; text-align: center; border-radius: 0.31rem; margin:0.24rem auto; font-size: 0.28rem;}
+.tiku li:last-child{ border-bottom: 0;}
+.qie{ padding-bottom: 0.05rem; overflow: hidden;}
+.videos{ width:43%; margin-left: 0.35rem; margin-top: 0.26rem; height: 3.1rem;margin-bottom: 0.1rem; float: left;}
+.videos:nth-of-type(2n+2){ margin-left: 0; margin-right: 0.35rem; float: right;}
+.videos dt{width:100%; height: 1.83rem;}
+.videos dt img{ width:100%; height: 100%; border-radius: 0.1rem;}
+.vid_tit{margin-top: 0.2rem;height: 0.6rem;}
+.vid_tit a{ font-size: 0.28rem; color: #333333;display: -webkit-box;-webkit-box-orient: vertical;-webkit-line-clamp: 2;overflow: hidden;}
+.vid_mon{ color: #FD5823; font-size: 0.28rem; margin-top: 0.2rem;}
+.vid_mon span{ font-size: 0.24rem; color: #999999; float: right; margin-right: 0.15rem;}
+.vid_mon span img{ width:0.21rem; height: 0.2rem; margin-right: 0.05rem;}
+.clear{ clear: both;}
+
+
+.zhaosheng{margin-top: 0.2rem; background: #fff; padding-bottom: 0.02rem;}
+ .zhao_tit{ width:calc(100% - 0.44rem); margin: auto; line-height: 0.98rem; font-size: 0.3rem; font-weight: bold;} 
+/*.zhao_tit{ width:calc(100% - 0.44rem); line-height: 0.5rem; font-size: 0.3rem;font-weight: bold;}*/
+.boyin{ width:1.05rem;height: 0.49rem; line-height: 0.49rem; color: #fff; text-align: center; border-bottom-right-radius: 0.25rem;border-top-right-radius: 0.25rem; font-size: 0.3rem; margin-top: 0.4rem;}
+.boyin:nth-of-type(1){background: #FFAD18; margin-top: 0;}
+.boyin:nth-of-type(2){background: #0FA4FF;}
+.boyin:nth-of-type(3){background: #F66262;}
+.boyin:nth-of-type(4){background: #77DA17;}
+.boyin:nth-of-type(5){background: #FFD118;}
+.boyin:nth-of-type(6){background: #C36BF0;}
+.boyin:nth-of-type(7){background: #FD9271;}
+.boyin:nth-of-type(8){background: #254ec4;}
+.boyin:nth-of-type(9){background: #8134bc;}
+.boyin:nth-of-type(10){background: #88e74f;}
+.boyin:nth-of-type(11){background: #dfe128;}
+.boyin:nth-of-type(12){background: #f9c539;}
+.wenzhang{ width:0.45rem !important; height: 0.45rem !important; float: left !important; margin-top: 0.25rem !important; margin-right: 0.21rem;}
+.tiku li:last-child{ border-bottom: ;}
+.bot_ma{ height: 1.5rem;}
+.yuan_foot{ line-height: 0.8rem; overflow: hidden; background: #fff; position: fixed; bottom: 0; width:100%; border-top: 1px solid #DDDDDD;}
+.yuan_foot dl{ line-height: 0.8rem; width: 0.9rem; float: left;}
+.yuan_foot dl{ line-height: 0.8rem; width: 12%; float: left;}
+.yuan_foot dl dt{ width:0.3rem; height: 0.3rem; text-align: center; margin: auto;}
+.yuan_foot dl dt img{ width:0.3rem; height: 0.26rem;}
+.yuan_foot dl dd{ text-align: center; font-size: 0.2rem; margin: auto; margin-top: 0.1rem; color: #666666;}
+.baoming{ width:5.02rem; height: 0.72rem; line-height: 0.72rem; background: #FCD936; float: right; text-align: center; border-radius: 0.36rem; margin-top: 0.3rem;}
+.baoming{ width:67%; height: 0.72rem; line-height: 0.72rem; background: #FCD936; float: right; text-align: center; border-radius: 0.36rem; margin-top: 0.3rem;}
+.baomings{ width:67%; height: 0.8rem; line-height: 0.8rem; background: #EBEBEB; float: right; text-align: center; border-radius: 0.36rem; margin-top: 0.2rem; margin-right: 0.24rem;}
+.baoming a,.baomings a{ color:#fff;}
+
+/*院校详情*/

@@ -1,0 +1,12 @@
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (1, '2822591384499186561', '497619122,505666502', '216681', 'item has existed', 1543642884, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (2, '7691464982268033793', '1543327609,2941578811', '216681', 'item has existed', 1543642886, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (3, '166764411911955329', '497619122,505666502', '216681', 'item has existed', 1543642885, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (4, '3003686704377464353', '1543327609,2941578811', '216681', 'item has existed', 1543642886, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (5, '4326530693211617793', '211371365,80471391', '', '', 1543659270, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (6, '5349546048094826785', '1261238649,460116140', '', '', 1543659273, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (7, '7369861450248761441', '1543301443,2396109376', '', '', 1543659277, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (8, '8843212198230308481', '3092951972,3229159555', '', '', 1543659280, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (9, '8293639210872517921', '211371365,80471391', '', '', 1543659272, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (10, '5480837307852348865', '1261238649,460116140', '', '', 1543659275, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (11, '9147362640534944737', '1543301443,2396109376', '', '', 1543659279, NULL);
+INSERT INTO `aip_image_search_log`(`id`, `log_id`, `cont_sign`, `error_code`, `error_msg`, `ctime`, `utime`) VALUES (12, '8336719081241391105', '3092951972,3229159555', '', '', 1543659282, NULL);

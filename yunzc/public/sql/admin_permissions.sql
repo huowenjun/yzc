@@ -1,0 +1,6 @@
+INSERT INTO `admin_permissions`(`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`) VALUES (1, 'All permission', '*', '', '*', '2018-11-12 15:48:20', '2018-11-12 15:48:20');
+INSERT INTO `admin_permissions`(`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`) VALUES (2, 'Dashboard', 'dashboard', 'GET', '/', '2018-11-12 15:48:20', '2018-11-12 15:48:20');
+INSERT INTO `admin_permissions`(`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`) VALUES (3, 'Login', 'auth.login', '', '/auth/login\r\n/auth/logout', '2018-11-12 15:48:20', '2018-11-12 15:48:20');
+INSERT INTO `admin_permissions`(`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`) VALUES (4, 'User setting', 'auth.setting', 'GET,PUT', '/auth/setting', '2018-11-12 15:48:20', '2018-11-12 15:48:20');
+INSERT INTO `admin_permissions`(`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`) VALUES (5, 'Auth management', 'auth.management', '', '/auth/roles\r\n/auth/permissions\r\n/auth/menu\r\n/auth/logs', '2018-11-12 15:48:20', '2018-11-12 15:48:20');
+INSERT INTO `admin_permissions`(`id`, `name`, `slug`, `http_method`, `http_path`, `created_at`, `updated_at`) VALUES (6, '权限名称', '权限标志', '', NULL, '2018-09-30 15:00:05', '2018-09-30 15:00:05');
